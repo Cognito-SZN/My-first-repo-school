@@ -5,12 +5,11 @@ Please complete task 5 to get this to compile.
 int red,  green,  blue;
 
 
-int circleSize;                //  5a
-int numberOfCircles;          // 5b
-int x;                        // 5c
-int y;                        // 5c
+float circleSize;                //  5a
+float numberOfCircles;          // 5b
+float x,  y;                        // 5c
 
-int counter  =  0;            //5d  
+int counter   =  0;            //5d  
 int rowCounter  =  0;          //5d
 
 
@@ -38,7 +37,7 @@ void draw(){
   // First part before the ?-mark, is a conditional. 
   // If this is true, the value after the ?-mark will be assigned. 
   // If not, the last value will.
-  counter =  frameCount % numberOfCircles == 0 ? 0 : counter+1;
+  counter =  x >=  width ? 0 : counter+1;
   rowCounter =  counter==0 ? rowCounter+1:rowCounter;
   
   
@@ -49,7 +48,7 @@ void draw(){
   // 3 % 3 = 0
  
   //Add the code for 6.c here
-  if (counter == 0)        //  
+  if (counter == 0)  {      //  
     fill(red  =  (int) random(255),green  =  (int) random(255),blue  =  (int) random(255));        // I re-assigned red, green, and blue to (int) random. 
-  
+  }
 }
